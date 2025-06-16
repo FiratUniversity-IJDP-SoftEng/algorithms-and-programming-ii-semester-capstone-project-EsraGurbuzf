@@ -1,32 +1,55 @@
-# [Your Algorithm Name] - Interactive Visualization
+# Kruskal's Algorithm - Interactive MST Visualizer
 
 ## Project Overview
 
-This project is an interactive web application that implements and visualizes [Algorithm Name], developed as part of the Algorithms and Programming II course at Fırat University, Software Engineering Department.
+This project is an interactive web application that implements and visualizes **Kruskal's Algorithm for Minimum Spanning Tree (MST)**, developed as part of the Algorithms and Programming II course at Fırat University, Software Engineering Department. It aims to provide a clear, step-by-step understanding of how Kruskal's algorithm constructs an MST, particularly focusing on the forest merging process using the Disjoint Set Union (DSU) data structure.
 
 ## Algorithm Description
 
-[Provide a comprehensive explanation of your algorithm here. Include the following elements:]
 
 ### Problem Definition
 
-[Clearly define the problem that the algorithm solves]
+The problem addressed is finding the **Minimum Spanning Tree (MST)** of a **connected, weighted, undirected graph**. An MST is a subset of the edges of a connected, edge-weighted undirected graph that connects all the vertices together, without any cycles and with the minimum possible total edge weight.
 
 ### Mathematical Background
 
-[Explain any mathematical concepts, formulas, or notation relevant to understanding the algorithm]
+Kruskal's algorithm relies on the **Cut Property** and the **Cycle Property** of MSTs:
+* **Cut Property:** For any cut (a partition of the vertices into two disjoint sets), if an edge has a strictly smaller weight than any other edge crossing the cut, then this edge belongs to all MSTs of the graph.
+* **Cycle Property:** If $C$ is a cycle in the graph, and $e$ is an edge of $C$ with a larger weight than any other edge of $C$, then $e$ cannot belong to an MST.
+
+The **Disjoint Set Union (DSU)** data structure is fundamental to the algorithm's efficiency, allowing for quick checks on whether adding an edge creates a cycle.
 
 ### Algorithm Steps
 
-1. [Step 1 with explanation]
-2. [Step 2 with explanation]
-3. [Step 3 with explanation]
-...
-
+1.  **Initialization:**
+    * Create an empty set `MST_Edges` to store the edges of the Minimum Spanning Tree.
+    * For each vertex in the graph, create a separate disjoint set using a DSU data structure. Initially, each vertex is its own component (forest).
+2.  **Sort Edges:** Sort all edges of the graph in non-decreasing order of their weights.
+3.  **Iterate and Connect:**
+    * Iterate through the sorted edges, from the smallest weight to the largest.
+    * For each edge $(u, v)$ with weight $w$:
+        * **Check for Cycle:** Use the `find` operation of the DSU to determine if vertices $u$ and $v$ already belong to the same connected component (set).
+        * **Add to MST (if no cycle):** If `find(u)` and `find(v)` return different roots (meaning $u$ and $v$ are in different components), it implies adding this edge will not form a cycle. Add $(u, v, w)$ to `MST_Edges`.
+        * **Merge Components:** Perform a `union` operation on the sets containing $u$ and $v$ to merge them into a single component.
+        * **Skip Edge (if cycle):** If `find(u)` and `find(v)` return the same root, it means adding this edge would create a cycle. Discard this edge.
+4.  **Termination:** The algorithm terminates when `MST_Edges` contains $V-1$ edges (where $V$ is the number of vertices), or when all edges have been processed.
 ### Pseudocode
 
 ```
-[Include pseudocode representation of your algorithm]
+Function Kruskal(vertices V, edges E):
+    MST_Edges = empty list
+    Sort E by weight in non-decreasing order
+
+    Initialize DSU_structure with |V| sets (each vertex in its own set)
+
+    For each edge (u, v) with weight w in sorted E:
+        If DSU_structure.Find(u) is not equal to DSU_structure.Find(v):
+            Add (u, v, w) to MST_Edges
+            DSU_structure.Union(u, v)
+        If len(MST_Edges) == |V| - 1: // Using len() for list size check
+            Break (MST is complete)
+            
+    Return MST_Edges
 ```
 
 ## Complexity Analysis
