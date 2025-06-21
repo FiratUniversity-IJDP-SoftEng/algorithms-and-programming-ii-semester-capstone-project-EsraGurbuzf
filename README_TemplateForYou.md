@@ -78,9 +78,9 @@ Function Kruskal(vertices V, edges E):
 
 ## Screenshots
 
-![Main Interface](![Algo1](https://github.com/user-attachments/assets/98251cd9-c507-48ce-adda-658a6e4b6129))
+![![Algo1](https://github.com/user-attachments/assets/98251cd9-c507-48ce-adda-658a6e4b6129)]
 
-![Algorithm in Action](![Algo2](https://github.com/user-attachments/assets/8176039b-9959-43c7-9c62-d9992705373f))
+![![Algo2](https://github.com/user-attachments/assets/8176039b-9959-43c7-9c62-d9992705373f)]
 
 ![Algo3](https://github.com/user-attachments/assets/bb1a4b90-9826-415b-8222-ff1745bdfc43)
 
