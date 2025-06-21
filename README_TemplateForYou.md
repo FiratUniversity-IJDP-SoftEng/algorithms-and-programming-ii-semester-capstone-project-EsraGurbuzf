@@ -95,10 +95,9 @@ Function Kruskal(vertices V, edges E):
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/yourusername/kruskal-mst-visualizer.git](https://github.com/yourusername/kruskal-mst-visualizer.git)
-    cd kruskal-mst-visualizer
+    git clone [https://github.com/FiratUniversity-IJDP-SoftEng/algorithms-and-programming-ii-semester-capstone-project-EsraGurbuzf.git]
+    cd algorithms-and-programming-ii-semester-capstone-project-EsraGurbuzf
     ```
-    *(Remember to replace `yourusername` with your actual GitHub username.)*
 
 2.  **Create a virtual environment (Recommended):**
     ```bash
@@ -210,7 +209,7 @@ The `test_algorithm.py` file includes various test cases designed to cover diffe
 
 ## Live Demo
 
-A live demo of this application is available at: [Insert Streamlit Cloud URL here]
+A live demo of this application is available at: [[Insert Streamlit Cloud URL here](https://kruskalgorithm.streamlit.app/)]
 
 ## Limitations and Future Improvements
 
