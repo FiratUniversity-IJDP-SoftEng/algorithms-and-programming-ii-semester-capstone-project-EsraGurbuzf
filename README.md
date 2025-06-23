@@ -78,13 +78,13 @@ Function Kruskal(vertices V, edges E):
 
 ## Screenshots
 
-![Algo1](screenshots\Algo1.png)
+- ![Algo1](screenshots\Algo1.png)
 
-![Algo2](screenshots\Algo2.png)
+- ![Algo2](screenshots\Algo2.png)
 
-![Algo3](screenshots\Algo3.png)
+- ![Algo3](screenshots\Algo3.png)
 
-![Algo4](screenshots\Algo4.png)
+- ![Algo4](screenshots\Algo4.png)
 
 
 
