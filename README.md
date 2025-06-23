@@ -78,13 +78,13 @@ Function Kruskal(vertices V, edges E):
 
 ## Screenshots
 
-![![Algo1](https://github.com/user-attachments/assets/98251cd9-c507-48ce-adda-658a6e4b6129)]
+![Algo1](screenshots\Algo1.png)
 
-![![Algo2](https://github.com/user-attachments/assets/8176039b-9959-43c7-9c62-d9992705373f)]
+![Algo2](screenshots\Algo2.png)
 
-![Algo3](https://github.com/user-attachments/assets/bb1a4b90-9826-415b-8222-ff1745bdfc43)
+![Algo3](screenshots\Algo3.png)
 
-![Algo4](https://github.com/user-attachments/assets/3039f37c-36eb-40ea-9534-a7056c120890)
+![Algo4](screenshots\Algo4.png)
 
 
 
